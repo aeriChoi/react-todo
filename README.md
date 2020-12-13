@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# React Todo List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+[https://aerichoi.github.io/react-todo/](http://aerichoi.github.io/react-todo/)
 
-### `yarn start`
+## Version
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- node.js: 12.18.4 [다운로드](https://nodejs.org/en/blog/release/v12.18.4/)
+- npm: 6.14.6
+```
+npm i npm@6.14.6
+```
+- create-react-app: 4.0.1
+- 이하 package.json 파일 확인.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Running Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `install`
+```
+cd react-todo
+npm install
+```
 
-### `yarn build`
+### `start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+배포 시에만 필요.(생략 가능)
 
-### `yarn eject`
+```
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 기능 요구사항
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 새로운 TODO(제목과 내용)를 작성할 수 있다.
+- TODO 목록을 볼 수 있다.
+- TODO 항목의 제목과 내용을 수정할 수 있다.
+- TODO 항목을 삭제할 수 있다.
+- 사용자의 선택에 의해 TODO에는 마감 기한을 넣을 수 있다.
+- TODO 항목의 우선순위를 설정 및 조절 할 수있다.
+- TODO 항목에 대한 완료처리를 할 수 있다.
+- 마감기한이 지난 TODO에 대해 알림을 노출할 수 있다.
+    - 성능 요구사항:
+        - TODO 이용 시 발생하는 오류 사항을 최소화한다.
+        - 오류 발생 시 사용자가 이해하기 쉽게 표시한다.
+        - 다른 사람이 읽기 쉬운 코드를 작성한다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 인터페이스 요구사항:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 직관적이고 의미 전달이 명확한 화면을 사용자에게 제공한다.
