@@ -11,6 +11,7 @@ export const todos = createReducer(initialState)
   .handleAction(actions.ADD_TODO, (state, action) =>
     produce(state, (draft) => {
       const {todos, type} = action.payload;
+      console.log('action.payload', action.payload);
       draft.todos = todos;
       draft.type = type;
     })
