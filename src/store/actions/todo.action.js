@@ -1,4 +1,7 @@
 import { createAction } from 'redux-actions';
-import { ADD_TODO } from './actionTypes';
 
-export const handleAddTodos = createAction(ADD_TODO, (item, type = 'add') => type)();
+/** Action Types */
+// todo 등록
+export const ADD_TODO = "ADD_TODO";
+
+export const handleAddTodos = createAction(ADD_TODO, (todos, type = 'add') => ({ todos, type }))();
