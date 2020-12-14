@@ -43,6 +43,16 @@ export const ListsItem = styled.li`
   padding: 10px 20px ;
   border-right: 15px;
   box-shadow: 0px 12px 20px rgba(0,0,0,0.5);
+  
+  &.top {
+    border-left: 5px solid var(--color-coralRed);
+  }
+  &.middle {
+    border-left: 5px solid var(--color-green);
+  }
+  &.low {
+    border-left: 5px solid var(--color-borderGrey);
+  }
 `;
 
 export const ItemTextBox = styled.p`
