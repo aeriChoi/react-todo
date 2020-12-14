@@ -14,7 +14,7 @@ const ListItem = memo(({data, removeToDo}) => {
       <ItemTextBox className="title">{data.title}</ItemTextBox>
       <ItemTextBox className="des">{data.description}</ItemTextBox>
       <ItemTextBox className="deadline">마감: {data.date}</ItemTextBox>
-      <button onClick={onRemove}>삭제</button>
+      <button  className="btn-remove" onClick={onRemove}>삭제</button>
     </ListsItem>
   );
 });

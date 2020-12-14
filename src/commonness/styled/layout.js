@@ -40,7 +40,7 @@ export const ListWrapper = styled.ul`
 
 export const ListsItem = styled.li`
   margin: 15px auto;
-  padding: 10px 20px ;
+  padding: 20px 30px ;
   border-right: 15px;
   box-shadow: 0px 12px 20px rgba(0,0,0,0.5);
   
@@ -52,6 +52,13 @@ export const ListsItem = styled.li`
   }
   &.low {
     border-left: 5px solid var(--color-borderGrey);
+  }
+  
+  .btn-remove {
+    padding: 5px 15px;
+    color: #fff;
+    background-color: var(--color-coralRed);
+    border-radius: 4px;
   }
 `;
 
