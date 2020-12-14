@@ -13,7 +13,7 @@ const ListItem = memo(({data, removeToDo}) => {
     <ListsItem className={`${data.rank}`}>
       <ItemTextBox className="title">{data.title}</ItemTextBox>
       <ItemTextBox className="des">{data.description}</ItemTextBox>
-      <ItemTextBox className="deadline">{data.deadline}</ItemTextBox>
+      <ItemTextBox className="deadline">{data.date}</ItemTextBox>
       <button onClick={onRemove}>삭제</button>
     </ListsItem>
   );
