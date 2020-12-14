@@ -9,12 +9,10 @@ export const isBefore = (type, date) => {
 
     switch (type) {
       case 'day':
-        const isBeforeDay = getDiffDay.includes('ago');
-        console.log('isBeforeDay', isBeforeDay);
+        const isBeforeDay = getDiffDay.includes('ago') || getDiffDay.includes('an') || getDiffDay.includes('minutes');
         return isBeforeDay
       case 'time':
         const isBeforeTime = getDiffTime.includes('ago');
-        console.log('isBeforeTime', isBeforeTime);
         return isBeforeTime
       default:
         return false;

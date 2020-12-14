@@ -30,8 +30,6 @@ const Forms = memo(({toDos, addToDo, onChange}) => {
     const isBeforeDay = isBefore('day', date);
     const isBeforeTime = isBefore('time', date);
 
-
-
     const item = {
       id: moment().valueOf(),
       title: title,
@@ -46,7 +44,7 @@ const Forms = memo(({toDos, addToDo, onChange}) => {
       onReset();
       return
     }
-    if ((!isBeforeDay && !isBeforeTime) || (!isBeforeDay && isBeforeTime)) {
+    if ((!isBeforeDay && isBeforeTime) || (!isBeforeDay && !isBeforeTime)) {
       setToDoItem({...item});
       addToDo(item);
       setToDoItem({
