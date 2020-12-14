@@ -24,7 +24,13 @@ const todosSlice = createSlice({
         localStorage.setItem('todos', JSON.stringify(action.payload))
       }
     },
-    removeTodo: (state, action) => state.filter(toDo => toDo.id !== action.payload)
+    removeTodo: (state, action) => {
+      const id = Number(action.payload.id);
+      const items = JSON.parse(localStorage.getItem('todos'));
+      const filtered = items.filter((item) => item.id !== id);
+      state.filter(toDo => toDo.id !== id);
+      localStorage.setItem('todos', JSON.stringify(filtered))
+    }
   }
 });
 

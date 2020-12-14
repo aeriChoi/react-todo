@@ -19,6 +19,16 @@ const ToDoContainers = memo(({toDos}) => {
     }
   };
 
+  const onRemove = (value, data)=> {
+    if (value) {
+
+      setState({
+        loaded: true,
+        toDos: JSON.parse(localStorage.getItem('todos')),
+      })
+    }
+  };
+
   useEffect(() => {
     setState({
       loaded: true,
@@ -37,7 +47,7 @@ const ToDoContainers = memo(({toDos}) => {
       <ListWrapper>
         {state.toDos && state.toDos.length > 0 && state.toDos.map(toDo => {
           return (
-            <ListItem key={toDo.id} data={toDo} />
+            <ListItem key={toDo.id} data={toDo} onRemove={onRemove} />
           )
         })}
       </ListWrapper>

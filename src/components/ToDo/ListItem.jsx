@@ -3,10 +3,15 @@ import { connect } from 'react-redux';
 import {removeTodo} from '../../store/todos/todosSlice';
 import {ListsItem, ItemTextBox} from '../../commonness';
 
-const ListItem = memo(({data, removeToDo}) => {
+const ListItem = memo(({data, removeToDo, onRemove}) => {
 
-  const onRemove = () => {
-    removeToDo(data);
+  const onRemoveClick = (e) => {
+    e.preventDefault();
+    const removeValue = {
+      id: e.target.value,
+    };
+    removeToDo(removeValue);
+    onRemove(true, removeValue);
   };
 
   return (
@@ -14,7 +19,7 @@ const ListItem = memo(({data, removeToDo}) => {
       <ItemTextBox className="title">{data.title}</ItemTextBox>
       <ItemTextBox className="des">{data.description}</ItemTextBox>
       <ItemTextBox className="deadline">마감: {data.date}</ItemTextBox>
-      <button  className="btn-remove" onClick={onRemove}>삭제</button>
+      <button type="button" className="btn-remove" value={data.id} onClick={onRemoveClick}>삭제</button>
     </ListsItem>
   );
 });
