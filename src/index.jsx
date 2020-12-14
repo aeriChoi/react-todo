@@ -4,14 +4,11 @@ import {App} from './components';
 import {GlobalStyle} from './commonness';
 import 'antd/dist/antd.css';
 
-import {createStore, applyMiddleware} from 'redux';
+import { configureStore } from "@reduxjs/toolkit";
 import {Provider} from 'react-redux';
-import {composeWithDevTools} from 'redux-devtools-extension';
-import thunkMiddleware from 'redux-thunk';
 import rootReducer from './store/reducers';
 
-const middleware = applyMiddleware(thunkMiddleware);
-const store = createStore(rootReducer, composeWithDevTools(middleware));
+const store = configureStore({reducer: rootReducer});
 
 ReactDOM.render(
   <Provider store={store}>

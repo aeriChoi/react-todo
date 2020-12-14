@@ -1,5 +1,10 @@
-export const getDate = () => {
-  // return the today in YYYY-MM-DD format
-  let date = new Date();
-  console.log('date', date);
+import moment from "moment";
+
+export const getDate = (date) => {
+  if (date !== undefined) {
+    const selectedDate = moment(date).format('YYYY-MM-DD HH:mm');
+    return selectedDate;
+  } else {
+    return '';
+  }
 };

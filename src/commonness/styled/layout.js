@@ -34,6 +34,45 @@ export const FormWrapper = styled.section`
   margin: 0 auto;
 `;
 
-export const ListWrapper = styled.section`
-  margin-top: 30px;
+export const ListWrapper = styled.ul`
+  margin: 30px auto;
+`;
+
+export const ListsItem = styled.li`
+  margin: 15px auto;
+  padding: 10px 20px ;
+  border-right: 15px;
+  box-shadow: 0px 12px 20px rgba(0,0,0,0.5);
+`;
+
+export const ItemTextBox = styled.p`
+  margin-bottom: 15px;
+ 
+  
+  &.title {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  &.des {
+    color: #999;
+    font-size: 14px;
+  }
+  
+  &.deadline {
+    color: var(--color-coralRed);
+    font-size: 12px;
+  }
+`;
+
+export const Title = styled.header`
+  h1 {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 36px;
+  }
 `;
